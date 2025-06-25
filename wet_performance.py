@@ -28,4 +28,4 @@ merged["PerformanceChange (%)"] = merged["LapTimeDiff (s)"] / merged["LapTime (s
 
 merged["WetPerformance"] = 1 + (merged["PerformanceChange (%)"])
 
-print(merged)
+# print(merged[["Driver", "WetPerformance"]])

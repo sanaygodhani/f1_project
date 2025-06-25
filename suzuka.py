@@ -56,12 +56,9 @@ for data in weather_data["list"]:
         forecast_data = data
         break
 
-if forecast_data:
-    rain = forecast_data["pop"]
-    temp = forecast_data["main"]["temp"]
-else:
-    rain = 0
-    temp = 20
+
+rain = forecast_data["pop"] if forecast_data else 0
+temp = forecast_data["main"]["temp"] if forecast_data else 20
 
 merged = quali_2025.merge(sector_avg, left_on="Driver", right_on="Driver", how="left")
 merged["ChanceForRain"] = rain
